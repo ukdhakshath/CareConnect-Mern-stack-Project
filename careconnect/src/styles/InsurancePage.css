@@ -1,0 +1,286 @@
+.insurance-page {
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.insurance-hero {
+    background: linear-gradient(135deg, #2980b9 0%, #2c3e50 100%);
+    padding: 8rem 0 4rem;
+    color: white;
+    text-align: center;
+}
+
+.insurance-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.insurance-hero .gradient-text {
+    background: linear-gradient(135deg, #f1c40f, #e67e22);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Features Section */
+.insurance-features {
+    padding: 4rem 0;
+    background: var(--light);
+}
+
+.insurance-features .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.feature-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 50px;
+    box-shadow: var(--shadow-md);
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-badge i {
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+/* Partners Grid */
+.insurance-partners {
+    padding: 6rem 0;
+    background: white;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.partner-card {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-light);
+}
+
+.partner-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--secondary);
+}
+
+.partner-logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-2);
+    color: white;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    padding: 0.5rem;
+}
+
+.partner-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+
+.partner-card p {
+    color: var(--gray);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.cashless-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 1rem;
+    background: var(--secondary-light);
+    color: var(--secondary-dark);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Claim Process */
+.claim-process {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.claim-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.claim-step {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    transition: transform 0.3s ease;
+}
+
+.claim-step:hover {
+    transform: translateY(-10px);
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background: white;
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+}
+
+.claim-step h3 {
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.claim-step p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* CTA Section */
+.insurance-cta {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+    color: white;
+    text-align: center;
+}
+
+.insurance-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.insurance-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.insurance-cta .btn {
+    background: white;
+    color: #f7971e;
+    font-size: 1.1rem;
+    padding: 1rem 3rem;
+}
+
+.insurance-cta .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .claim-steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .insurance-hero {
+        padding: 6rem 1rem 3rem;
+    }
+
+    .insurance-hero h1 {
+        font-size: 2rem;
+    }
+
+    .insurance-features .features-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .feature-badge {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .claim-steps {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .insurance-cta {
+        padding: 4rem 1rem;
+    }
+
+    .insurance-cta h2 {
+        font-size: 2rem;
+    }
+
+    .insurance-cta p {
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .partner-card {
+        padding: 1.5rem;
+    }
+
+    .step-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .claim-step h3 {
+        font-size: 1.1rem;
+    }
+
+    .claim-step p {
+        font-size: 0.9rem;
+    } }

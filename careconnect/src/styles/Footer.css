@@ -1,0 +1,278 @@
+.footer {
+  background: #1a1e2b;
+  color: white;
+  padding: 4rem 0 2rem;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Logo Styles - cuure.health */
+.footer-logo {
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo-link {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.footer-logo-link span:first-child {
+  color: #4ECDC4;
+  font-weight: 700;
+}
+
+.footer-logo .logo-dot {
+  color: #FF6B6B;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0 1px 0 2px;
+  line-height: 1;
+}
+
+.footer-description {
+  color: #a0a3b1;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+/* Trust Badges */
+.trust-badges {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+}
+
+.badge-icon {
+  font-size: 1.2rem;
+  color: #4ECDC4;
+}
+
+.badge-text {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Footer Sections */
+.footer-section h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(135deg, #2A5C7D 0%, #4ECDC4 100%);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section li {
+  margin-bottom: 1rem;
+  color: #a0a3b1;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.footer-section a {
+  color: #a0a3b1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #4ECDC4;
+}
+
+/* Contact Section */
+.contact-icon {
+  font-size: 1.2rem;
+  min-width: 24px;
+  color: #4ECDC4;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact-details a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.contact-note {
+  color: #a0a3b1;
+  font-size: 0.85rem;
+}
+
+/* Social Links */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #4ECDC4;
+  transform: translateY(-3px);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #a0a3b1;
+  font-size: 0.9rem;
+}
+
+.footer-copyright p {
+  margin-bottom: 0.3rem;
+}
+
+.footer-copyright i {
+  color: #FF6B6B;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer-container {
+    padding: 0 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .trust-badges {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-section h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-section li {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-details {
+    align-items: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-logo-link {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-badges {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo-link {
+    font-size: 1.8rem;
+  }
+
+  .footer-logo .logo-dot {
+    font-size: 2.2rem;
+  }
+}

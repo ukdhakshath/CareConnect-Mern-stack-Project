@@ -1,0 +1,32 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build folders
+dist/
+build/
+
+# Vite files
+.vite/
+
+# Coverage
+coverage/
+
+# IDE files
+.vscode/
+.idea/
+
+# Optional (if you have uploads/temp files)
+uploads/
+temp/

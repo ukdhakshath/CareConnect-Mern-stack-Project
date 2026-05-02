@@ -1,0 +1,899 @@
+/* ===== MAIN CONTAINER ===== */
+.insuranceContainer {
+    min-height: 100vh;
+    background: #f8fafc;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    padding-top: 70px;
+}
+
+/* ===== HERO SECTION (Shared) ===== */
+.heroSection,
+.detailsHero,
+.formHero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.detailsHero,
+.formHero {
+    padding: 3rem 2rem;
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.heroTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+    font-size: 1.2rem;
+    color: white;
+    opacity: 0.9;
+}
+
+.planDescription {
+    color: white;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 1rem auto 0;
+    font-size: 1.1rem;
+}
+
+/* ===== CATEGORY FILTER ===== */
+.categorySection {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.categoryGrid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.categoryBtn {
+    padding: 0.8rem 2rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 50px;
+    background: white;
+    color: #4a5568;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.categoryBtn:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.activeCategory {
+    background: #667eea;
+    color: white !important;
+    border-color: #667eea;
+}
+
+/* ===== PLANS LISTING PAGE ===== */
+.plansSection {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1a1e2b;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+}
+
+.sectionSubtitle {
+    color: #718096;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.plansGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Plan Card */
+.planCard {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.planCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.planHeader {
+    margin-bottom: 1rem;
+}
+
+.planName {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1e2b;
+    margin: 0 0 0.3rem 0;
+}
+
+.planProvider {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.planBadges {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.rating {
+    background: #fef3c7;
+    color: #92400e;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.reviews {
+    color: #718096;
+    font-size: 0.8rem;
+    margin-left: 0.3rem;
+}
+
+.claimRatio {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.planCoverage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.coverageItem {
+    text-align: center;
+}
+
+.coverageLabel {
+    display: block;
+    color: #718096;
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.coverageValue {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1e2b;
+}
+
+.planBenefits {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.benefitsTitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1e2b;
+    margin: 0 0 1rem 0;
+}
+
+.benefitsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.benefitItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+.benefitIcon {
+    color: #48bb78;
+    font-weight: 600;
+}
+
+.moreBenefits {
+    color: #718096;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+.planActions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.viewDetailsBtn,
+.buyNowBtn {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.viewDetailsBtn {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.viewDetailsBtn:hover {
+    background: #667eea;
+    color: white;
+}
+
+.buyNowBtn {
+    background: #667eea;
+    color: white;
+}
+
+.buyNowBtn:hover {
+    background: #5a67d8;
+}
+
+/* ===== PREMIUM CALCULATOR ===== */
+.calculatorSection {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.calculatorTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a1e2b;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.calculatorSubtitle {
+    color: #718096;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.calculatorCard {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.calculatorForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.calculatorInput,
+.calculatorSelect {
+    padding: 0.875rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    width: 100%;
+}
+
+.calculatorInput:focus,
+.calculatorSelect:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.calculateBtn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.calculateBtn:hover {
+    background: #5a67d8;
+}
+
+.premiumResult {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px dashed #e2e8f0;
+    text-align: center;
+}
+
+.premiumAmount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1e2b;
+    margin: 0.5rem 0;
+}
+
+.premiumNote {
+    color: #718096;
+    font-size: 0.85rem;
+}
+
+/* ===== DETAILS PAGE STYLES ===== */
+.detailsLayout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+}
+
+.detailsMain {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.detailsCard {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 2rem;
+}
+
+.cardTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1e2b;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.overviewGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.overviewItem {
+    text-align: center;
+}
+
+.overviewLabel {
+    display: block;
+    color: #718096;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+}
+
+.overviewValue {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1e2b;
+}
+
+.benefitsFullList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.benefitFullItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a5568;
+    font-size: 0.95rem;
+    padding: 0.5rem;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.eligibilityContent {
+    line-height: 2;
+}
+
+.eligibilityContent p {
+    margin: 0.5rem 0;
+    color: #4a5568;
+}
+
+.documentsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.documentItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a5568;
+    font-size: 0.95rem;
+    padding: 0.5rem;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.documentIcon {
+    font-size: 1.1rem;
+}
+
+/* Loading State */
+.loadingState {
+    text-align: center;
+    padding: 4rem;
+    color: #718096;
+}
+
+/* Sidebar for Details Page */
+.detailsSidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.sidebarCard {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+}
+
+.sidebarTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1e2b;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sidebarInfo {
+    margin-bottom: 1.5rem;
+}
+
+.sidebarRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: #4a5568;
+}
+
+.sidebarRow strong {
+    color: #1a1e2b;
+}
+
+.sidebarBuyBtn {
+    width: 100%;
+    padding: 1rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.sidebarBuyBtn:hover {
+    background: #5a67d8;
+}
+
+.sidebarBackBtn {
+    width: 100%;
+    padding: 0.8rem;
+    background: none;
+    border: none;
+    color: #667eea;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.sidebarBackBtn:hover {
+    text-decoration: underline;
+}
+
+/* ===== FORM PAGE STYLES ===== */
+.formLayout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 2rem;
+}
+
+.formSection {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 2rem;
+}
+
+.formSectionTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1e2b;
+    margin: 1.5rem 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.formSectionTitle:first-of-type {
+    margin-top: 0;
+}
+
+.applicationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.formInput,
+.formTextarea,
+.formSelect {
+    padding: 0.875rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    width: 100%;
+    font-family: inherit;
+}
+
+.formInput:focus,
+.formTextarea:focus,
+.formSelect:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.inputError {
+    border-color: #e53e3e;
+}
+
+.errorMessage {
+    color: #e53e3e;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkboxLabel input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 0.2rem;
+}
+
+.submitApplicationBtn {
+    width: 100%;
+    padding: 1rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.submitApplicationBtn:hover {
+    background: #5a67d8;
+}
+
+/* Plan Summary Sidebar (for Form Page) */
+.planSummary {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.summaryTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1e2b;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.summaryCard {
+    margin-bottom: 1.5rem;
+}
+
+.planSummaryName {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1e2b;
+    margin: 0 0 0.2rem 0;
+}
+
+.planSummaryProvider {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.summaryDetails {
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    color: #4a5568;
+}
+
+.cancelBtn {
+    width: 100%;
+    padding: 0.8rem;
+    background: none;
+    border: none;
+    color: #667eea;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.cancelBtn:hover {
+    text-decoration: underline;
+}
+
+/* ===== SUCCESS PAGE ===== */
+.successContainer {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.successIcon {
+    width: 70px;
+    height: 70px;
+    background: #48bb78;
+    color: white;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.successTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1a1e2b;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.successMessage {
+    color: #718096;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.applicationDetails {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.applicationDetails h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1e2b;
+    margin-bottom: 1rem;
+}
+
+.applicationDetails p {
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.backToPlansBtn {
+    padding: 1rem 2rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.backToPlansBtn:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .plansGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detailsLayout,
+    .formLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .detailsSidebar,
+    .planSummary {
+        position: static;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2rem;
+    }
+
+    .plansGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .categoryGrid {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .categoryBtn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+
+    .overviewGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .detailsLayout,
+    .formLayout {
+        padding: 1rem;
+    }
+
+    .detailsCard,
+    .formSection,
+    .sidebarCard,
+    .planSummary {
+        padding: 1.5rem;
+    }
+
+    .successContainer {
+        margin: 20px 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .successTitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroTitle {
+        font-size: 1.5rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+    }
+
+    .planCoverage {
+        grid-template-columns: 1fr;
+    }
+
+    .planActions {
+        grid-template-columns: 1fr;
+    }
+
+    .premiumAmount {
+        font-size: 2rem;
+    }
+
+    .formInput,
+    .formTextarea,
+    .formSelect {
+        padding: 0.75rem;
+    }
+
+    .summaryRow {
+        font-size: 0.9rem;
+    }
+}

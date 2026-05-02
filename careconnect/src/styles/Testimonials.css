@@ -1,0 +1,245 @@
+.testimonials {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #ffffff 0%, #bdb2c8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="white" opacity="0.1"/></svg>') repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.testimonials .section-header,
+.testimonials .section-title,
+.testimonials .section-subtitle {
+  color: rgb(44, 37, 37);
+}
+
+.testimonials .section-badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(34, 28, 28);
+}
+
+.testimonials-slider {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-2xl);
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: var(--primary);
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.testimonial-quote {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--dark);
+  margin-bottom: 2rem;
+  padding-right: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-rating {
+  margin-bottom: 2rem;
+}
+
+.testimonial-rating i {
+  color: #ddd;
+  font-size: 1.2rem;
+  margin-right: 0.2rem;
+}
+
+.testimonial-rating i.filled {
+  color: #ffc107;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary);
+}
+
+.author-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  color: var(--dark);
+}
+
+.author-info p {
+  color: var(--gray);
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.slider-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  color: var(--primary);
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+  transform: scale(1.1);
+  background: var(--gradient-2);
+  color: white;
+  box-shadow: var(--shadow-xl);
+}
+
+.slider-btn:active {
+  transform: scale(0.95);
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background: white;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 4rem 0;
+  }
+
+  .testimonial-card {
+    padding: 2rem;
+  }
+
+  .testimonial-quote {
+    font-size: 1rem;
+    padding-right: 2rem;
+    line-height: 1.6;
+  }
+
+  .quote-icon {
+    font-size: 3rem;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .author-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .author-info h4 {
+    font-size: 1rem;
+  }
+
+  .slider-controls {
+    gap: 1rem;
+  }
+
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .testimonials-slider {
+    max-width: 700px;
+  }
+
+  .testimonial-card {
+    padding: 2.5rem;
+  }
+
+  .testimonial-quote {
+    font-size: 1.1rem;
+  }
+}
+
+/* Animation for dots */
+@keyframes dotPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.dot.active {
+  animation: dotPulse 2s infinite;
+}
